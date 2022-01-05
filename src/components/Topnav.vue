@@ -42,3 +42,8 @@
     }
   }
 </style>
+
+<!-- 此行代码用来解决 vscode 的报错信息 -->
+<script>
+  export default {};
+</script>

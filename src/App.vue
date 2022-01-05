@@ -1,14 +1,11 @@
 <template>
-  <div>hi</div>
-  <heycn />
+  <div>导航栏 | <router-link to="/">heycn</router-link> | <router-link to="/xxx">heycn2</router-link></div>
+  <hr />
+  <router-view />
 </template>
 
 <script>
-  import heycn from './components/heycn.vue';
   export default {
-    name: 'App',
-    components: {
-      heycn
-    }
+    name: 'App'
   };
 </script>

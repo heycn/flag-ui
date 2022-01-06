@@ -27,41 +27,43 @@ button {
   background: #808695;
   border-radius: 11px;
   position: relative;
-}
 
-span {
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  height: 18px;
-  width: 18px;
-  background: #f8f8f9;
-  border-radius: 9px;
-  transition: all 250ms;
-}
-
-button.checked {
-  background: #2d8cf0;
-}
-
-button.checked > span {
-  left: calc(100% - 20px);
-}
-
-button:focus {
-  outline: none;
-}
-
-button:active {
   > span {
-    width: 22px;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: 18px;
+    width: 18px;
+    background: #f8f8f9;
+    border-radius: 9px;
+    transition: all 250ms;
+  }
+
+  &.checked {
+    background: #2d8cf0;
+
+    > span {
+      left: calc(100% - 20px);
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    > span {
+      width: 22px;
+    }
+  }
+
+  &.checked:active {
+    > span {
+      width: 22px;
+      margin-left: -4px;
+    }
   }
 }
 
-button.checked:active {
-  > span {
-    width: 22px;
-    margin-left: -4px;
-  }
-}
+
 </style>

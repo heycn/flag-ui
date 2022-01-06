@@ -23,4 +23,8 @@ span {
   background: white;
   border-radius: 9px;
 }
+
+button:hover > span {
+  left: calc(100% - 20px);
+}
 </style>

@@ -3,12 +3,13 @@
 </template>
 
 <script lang="ts">
-import {provide, ref} from 'vue';
+import {ref, provide} from 'vue';
 
 export default {
   name: 'App',
   setup() {
-    const menuVisible = ref(false);
+    const width = document.documentElement.clientWidth;
+    const menuVisible = ref(width <= 500 ? false : true);
     provide('menuVisible', menuVisible); // 相当于 set
   }
 };

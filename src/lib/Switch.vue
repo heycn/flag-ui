@@ -39,6 +39,7 @@ span {
   width: 18px;
   background: white;
   border-radius: 9px;
+  transition: left 250ms;
 }
 
 button.checked {
@@ -47,5 +48,9 @@ button.checked {
 
 button.checked > span {
   left: calc(100% - 20px);
+}
+
+button:focus {
+  outline: none;
 }
 </style>

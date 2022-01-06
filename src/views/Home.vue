@@ -3,13 +3,6 @@
 <template>
   <div>
     <Topnav/>
-    <div class="topnav">
-      <div class="logo">LOGO</div>
-      <ul class="menu">
-        <li>菜单1</li>
-        <li>菜单2</li>
-      </ul>
-    </div>
     <div class="banner">
       <h1>Wheel UI</h1>
       <h2>一个基于 Vue 开发的 UI框架</h2>

@@ -45,7 +45,6 @@ $radius: 4px;
   &:hover {
     color: $blue-light;
     border-color: $blue-light;
-
   }
 
   &:focus {
@@ -57,7 +56,7 @@ $radius: 4px;
     outline: none;
   }
 
-  //兼容浏览器 :focus 在 Firefox 不太好用
+  //兼容浏览器 :focus { outline: none } 在 Firefox 不太好用
   &::-moz-focus-inner {
     border: 0;
   }

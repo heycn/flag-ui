@@ -24,7 +24,7 @@ button {
   height: 22px;
   width: 44px;
   border: none;
-  background: #c7cacf;
+  background: #959595;
   border-radius: 11px;
   position: relative;
 
@@ -34,7 +34,7 @@ button {
     left: 2px;
     height: 18px;
     width: 18px;
-    background: #f8f8f9;
+    background: #f8f8f8;
     border-radius: 9px;
     transition: all 250ms;
   }

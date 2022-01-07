@@ -4,10 +4,15 @@
     <hr>
     <h1>示例1</h1>
     <div>
-      <Button>默认是button</Button>
-      <Button theme="button"> is button</Button>
-      <Button theme="link"> is link</Button>
-      <Button theme="text"> is text</Button>
+      <Button theme="button">普通按钮</Button>
+      <Button theme="link">链接按钮</Button>
+      <Button theme="text">文本按钮</Button>
+    </div>
+    <h1>示例2</h1>
+    <div>
+      <Button size="normal">普通尺寸</Button>
+      <Button size="small">小号尺寸</Button>
+      <Button size="big">大号尺寸</Button>
     </div>
   </div>
 </template>

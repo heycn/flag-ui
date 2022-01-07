@@ -29,7 +29,7 @@ export default {
       return {
         [`wheel-theme-${theme}`]: theme,
         [`wheel-size-${size}`]: size,
-        [`wheel-size-${level}`]: level,
+        [`wheel-level-${level}`]: level
       };
     });
     return {classes};
@@ -41,8 +41,7 @@ export default {
 $h: 32px;
 $border-color: #dcdee2;
 $color: #515a6e;
-$blue: #2d8cf0;
-$blue-light: #5cadff;
+$blue: #0082ff;
 $red: #e81123;
 $radius: 4px;
 .wheel-button {
@@ -54,7 +53,8 @@ $radius: 4px;
   justify-content: center;
   align-items: center;
   white-space: nowrap;
-  background: #f8f8f8;
+  //TODO
+  background: #ffffff;
   color: $color;
   border: 1px solid $border-color;
   border-radius: $radius;
@@ -66,13 +66,13 @@ $radius: 4px;
   }
 
   &:hover {
-    color: $blue-light;
-    border-color: $blue-light;
+    color: lighten($blue, 10%);
+    border-color: lighten($blue, 10%);
   }
 
   &:focus {
-    color: $blue;
-    border-color: $blue;
+    color: darken($blue, 10%);
+    border-color: darken($blue, 10%);
   }
 
   &:focus {
@@ -89,8 +89,14 @@ $radius: 4px;
     box-shadow: none;
     color: $blue;
 
-    &:hover, &:focus {
+    &:hover {
       color: lighten($blue, 10%);
+      border-color: lighten($blue, 10%);
+    }
+
+    &:focus {
+      color: darken($blue, 10%);
+      border-color: darken($blue, 10%);
     }
   }
 
@@ -99,79 +105,102 @@ $radius: 4px;
     box-shadow: none;
     color: inherit;
 
-    &:hover,
+    &:hover {
+      background: lighten(#f8f8f8, 5%);
+
+    }
+
     &:focus {
-      background: darken(white, 5%);
+      background: darken(#f8f8f8, 5%);
     }
   }
 
+  &.wheel-size-big {
+    font-size: 24px;
+    height: 48px;
+    padding: 0 16px;
+  }
+
+  &.wheel-size-small {
+    font-size: 12px;
+    height: 20px;
+    padding: 0 4px;
+  }
+
   &.wheel-theme-button {
-    &.wheel-size-big {
-      font-size: 24px;
-      height: 48px;
-      padding: 0 16px
-    }
+    &.wheel-level-primary {
+      background: $blue;
+      color: #f8f8f8;
+      border-color: $blue;
 
-    &.wheel-size-small {
-      font-size: 12px;
-      height: 20px;
-      padding: 0 4px;
-    }
-
-    &.wheel-theme-button {
-      &.wheel-level-primary {
-        background: $blue;
-        color: white;
-        border-color: $blue;
-
-        &:hover,
-        &:focus {
-          background: darken($blue, 10%);
-          border-color: darken($blue, 10%);
-        }
+      &:hover {
+        background: lighten($blue, 6%);
+        border-color: lighten($blue, 6%);
       }
 
-      &.wheel-level-danger {
-        background: $red;
-        border-color: $red;
-        color: white;
-
-        &:hover,
-        &:focus {
-          background: darken($red, 10%);
-          border-color: darken($red, 10%);
-        }
+      &:focus {
+        background: darken($blue, 6%);
+        border-color: darken($blue, 6%);
       }
     }
 
-    &.wheel-theme-link {
-      &.wheel-level-danger {
-        color: $red;
+    &.wheel-level-danger {
+      background: $red;
+      color: #f8f8f8;
+      border-color: $red;
 
-        &:hover,
-        &:focus {
-          color: darken($red, 10%);
-        }
+      &:hover {
+        background: lighten($red, 6%);
+        border-color: lighten($red, 6%);
+      }
+
+      &:focus {
+        background: darken($red, 6%);
+        border-color: darken($red, 6%);
+      }
+    }
+  }
+
+  &.wheel-theme-link {
+    &.wheel-level-danger {
+      color: $red;
+      background: #f8f8f8;
+
+      &:hover {
+        color: lighten($red, 10%);
+        border-color: lighten($red, 10%);
+      }
+
+      &:focus {
+        color: darken($red, 6%);
+        border-color: darken($red, 6%);
+      }
+    }
+  }
+
+  &.wheel-theme-text {
+    &.wheel-level-primary {
+      color: $blue;
+
+      &:hover {
+        color: lighten($blue, 10%);
+
+      }
+
+      &:focus {
+        color: darken($blue, 10%);
       }
     }
 
-    &.wheel-theme-text {
-      &.wheel-level-primary {
-        color: $blue;
+    &.wheel-level-danger {
+      color: $red;
 
-        &:hover,
-        &:focus {
-          color: darken($blue, 10%);
-        }
+      &:hover {
+        color: lighten($red, 10%);
       }
 
-      &.wheel-level-danger {
-        color: $red;
-
-        &:hover,
-        &:focus {
-          color: darken($red, 10%);
-        }
+      &:focus {
+        color: darken($red, 6%);
       }
     }
   }

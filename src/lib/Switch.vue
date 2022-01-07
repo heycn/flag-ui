@@ -24,7 +24,7 @@ button {
   height: 22px;
   width: 44px;
   border: none;
-  background: #808695;
+  background: #c7cacf;
   border-radius: 11px;
   position: relative;
 

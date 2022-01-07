@@ -53,11 +53,11 @@ $border-color: #dcdee2;
 $color: #515a6e;
 $blue: #2d8cf0;
 $radius: 4px;
-$red: #e81123;
+$red: #fe3435;
 $grey: #c5c8ce;
 
-// 基础按钮样式
 .wheel-button {
+  // 基础按钮样式
   box-sizing: border-box;
   height: $h;
   padding: 0 12px;
@@ -97,6 +97,7 @@ $grey: #c5c8ce;
     border: 0;
   }
 
+  // 链接按钮样式
   &.wheel-theme-link {
     border-color: transparent;
     box-shadow: none;
@@ -105,6 +106,10 @@ $grey: #c5c8ce;
     &:hover,
     &:focus {
       color: lighten($blue, 10%);
+    }
+
+    &:active {
+      color: darken($blue, 10%);
     }
   }
 
@@ -116,11 +121,11 @@ $grey: #c5c8ce;
 
     &:hover,
     &:focus {
-      background: darken(white, 5%);
+      background: darken(white, 4%);
     }
 
     &:active {
-      background: darken(white, 8%);
+      background: darken(white, 6%);
     }
 
   }
@@ -149,13 +154,13 @@ $grey: #c5c8ce;
 
       &:hover,
       &:focus {
-        background: darken($blue, 10%);
-        border-color: darken($blue, 10%);
+        background: lighten($blue, 10%);
+        border-color: lighten($blue, 10%);
       }
 
       &:active {
-        background: darken($blue, 18%);
-        border-color: darken($blue, 18%);
+        background: darken($blue, 10%);
+        border-color: darken($blue, 10%);
       }
     }
 
@@ -167,13 +172,13 @@ $grey: #c5c8ce;
 
       &:hover,
       &:focus {
-        background: darken($red, 10%);
-        border-color: darken($red, 10%);
+        background: lighten($red, 10%);
+        border-color: lighten($red, 10%);
       }
 
       &:active {
-        background: darken($red, 16%);
-        border-color: darken($red, 16%);
+        background: darken($red, 10%);
+        border-color: darken($red, 10%);
       }
     }
   }
@@ -187,31 +192,48 @@ $grey: #c5c8ce;
 
       &:hover,
       &:focus {
-        color: darken($red, 10%);
+        color: lighten($red, 12%);
+      }
+
+      &:active {
+        color: darken($red, 12%);
+
       }
     }
   }
 
+  // 文本按钮各个状态
   &.wheel-theme-text {
+    // 主要状态
     &.wheel-level-primary {
       color: $blue;
 
       &:hover,
       &:focus {
+        color: lighten($blue, 10%);
+      }
+
+      &:active {
         color: darken($blue, 10%);
       }
     }
 
+    // 危险状态
     &.wheel-level-danger {
       color: $red;
 
       &:hover,
       &:focus {
+        color: lighten($red, 10%);
+      }
+
+      &:active {
         color: darken($red, 10%);
       }
     }
   }
 
+  // 不可选种状态
   &.wheel-theme-button {
     &[disabled] {
       cursor: not-allowed;
@@ -230,6 +252,7 @@ $grey: #c5c8ce;
     }
   }
 
+  // 加载状态
   > .wheel-loadingIndicator {
     width: 14px;
     height: 14px;

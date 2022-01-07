@@ -64,7 +64,6 @@ $radius: 4px;
   justify-content: center;
   align-items: center;
   white-space: nowrap;
-  //TODO
   background: #ffffff;
   color: $color;
   border: 1px solid $border-color;

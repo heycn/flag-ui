@@ -4,12 +4,10 @@
     <hr>
     <h1>示例1</h1>
     <div>
-      <Button @click="onClick"
-              @focus="onClick"
-              @mouseover="onClick"
-      >
-        is Button
-      </Button>
+      <Button>默认是button</Button>
+      <Button theme="button"> is button</Button>
+      <Button theme="link"> is link</Button>
+      <Button theme="text"> is text</Button>
     </div>
   </div>
 </template>

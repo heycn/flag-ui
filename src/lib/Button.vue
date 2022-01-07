@@ -1,6 +1,6 @@
 <template>
   <button class="wheel-button"
-          :class="`theme-${theme}`">
+          :class="`wheel-theme-${theme}`">
     <slot/>
   </button>
 </template>
@@ -16,12 +16,12 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 $h: 32px;
 $border-color: #dcdee2;
 $color: #515a6e;
 $blue: #2d8cf0;
-$blue-light: #2d8cf0;
+$blue-light: #5cadff;
 $radius: 4px;
 .wheel-button {
   box-sizing: border-box;
@@ -57,6 +57,7 @@ $radius: 4px;
     outline: none;
   }
 
+  //兼容浏览器 :focus 在 Firefox 不太好用
   &::-moz-focus-inner {
     border: 0;
   }

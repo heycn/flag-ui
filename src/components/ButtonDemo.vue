@@ -2,7 +2,10 @@
   <div>
     Button Demo
     <hr>
-    <Button/>
+    <h1>示例1：</h1>
+    <div>
+      <Button>is Button Demo</Button>
+    </div>
   </div>
 </template>
 

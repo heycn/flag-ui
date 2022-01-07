@@ -1,6 +1,8 @@
 <template>
   <button class="wheel-button"
-          :class="classes">
+          :class="classes"
+          :disabled="disabled">
+    <span v-if="loading" class="wheel-loadingIndicator"></span>
     <slot/>
   </button>
 </template>
@@ -22,6 +24,14 @@ export default {
       type: String,
       default: 'normal',
     },
+    disabled: {
+      type: Boolean,
+      default: false
+    },
+    loading: {
+      type: Boolean,
+      default: false
+    }
   },
   setup(props) {
     const {theme, size, level} = props;
@@ -43,6 +53,7 @@ $border-color: #dcdee2;
 $color: #515a6e;
 $blue: #0082ff;
 $red: #e81123;
+$grey: #c5c8ce;
 $radius: 4px;
 .wheel-button {
   box-sizing: border-box;
@@ -203,6 +214,45 @@ $radius: 4px;
         color: darken($red, 6%);
       }
     }
+  }
+
+  &.wheel-theme-button {
+    &[disabled] {
+      cursor: not-allowed;
+      color: $grey;
+
+      &:hover {
+        border-color: $grey;
+      }
+    }
+  }
+
+  &.wheel-theme-link, &.wheel-theme-text {
+    &[disabled] {
+      cursor: not-allowed;
+      color: $grey;
+    }
+  }
+
+  > .wheel-loadingIndicator {
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    margin-right: 4px;
+    border-radius: 8px;
+    border-color: $blue $blue $blue transparent;
+    border-style: solid;
+    border-width: 2px;
+    animation: wheel-spin 1s infinite linear;
+  }
+}
+
+@keyframes wheel-spin {
+  0% {
+    transform: rotate(0deg)
+  }
+  100% {
+    transform: rotate(360deg)
   }
 }
 </style>

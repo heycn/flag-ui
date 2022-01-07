@@ -51,10 +51,12 @@ export default {
 $h: 32px;
 $border-color: #dcdee2;
 $color: #515a6e;
-$blue: #0082ff;
+$blue: #2d8cf0;
+$radius: 4px;
 $red: #e81123;
 $grey: #c5c8ce;
-$radius: 4px;
+
+// 基础按钮样式
 .wheel-button {
   box-sizing: border-box;
   height: $h;
@@ -64,7 +66,7 @@ $radius: 4px;
   justify-content: center;
   align-items: center;
   white-space: nowrap;
-  background: #ffffff;
+  background: white;
   color: $color;
   border: 1px solid $border-color;
   border-radius: $radius;
@@ -75,21 +77,22 @@ $radius: 4px;
     margin-left: 8px;
   }
 
-  &:hover {
-    color: lighten($blue, 10%);
-    border-color: lighten($blue, 10%);
+  &:hover,
+  &:focus {
+    color: $blue;
+    border-color: $blue;
   }
 
-  &:focus {
-    color: darken($blue, 10%);
-    border-color: darken($blue, 10%);
+  &:active {
+    color: darken($blue, 14%);
+    border-color: darken($blue, 14%);
   }
 
   &:focus {
     outline: none;
   }
 
-  //兼容浏览器 :focus { outline: none } 在 Firefox 不太好用
+
   &::-moz-focus-inner {
     border: 0;
   }
@@ -99,91 +102,92 @@ $radius: 4px;
     box-shadow: none;
     color: $blue;
 
-    &:hover {
-      color: lighten($blue, 10%);
-      border-color: lighten($blue, 10%);
-    }
-
+    &:hover,
     &:focus {
-      color: darken($blue, 10%);
-      border-color: darken($blue, 10%);
+      color: lighten($blue, 10%);
     }
   }
 
+  // 文本按钮样式
   &.wheel-theme-text {
     border-color: transparent;
     box-shadow: none;
     color: inherit;
 
-    &:hover {
-      background: lighten(#f8f8f8, 5%);
-
-    }
-
+    &:hover,
     &:focus {
-      background: darken(#f8f8f8, 5%);
+      background: darken(white, 5%);
     }
+
+    &:active {
+      background: darken(white, 8%);
+    }
+
   }
 
+  // 大号按钮样式
   &.wheel-size-big {
     font-size: 24px;
     height: 48px;
     padding: 0 16px;
   }
 
+  // 小号按钮样式
   &.wheel-size-small {
     font-size: 12px;
     height: 20px;
     padding: 0 4px;
   }
 
+  // 普通按钮各个状态
   &.wheel-theme-button {
+    // 主要状态
     &.wheel-level-primary {
       background: $blue;
-      color: #f8f8f8;
+      color: white;
       border-color: $blue;
 
-      &:hover {
-        background: lighten($blue, 6%);
-        border-color: lighten($blue, 6%);
+      &:hover,
+      &:focus {
+        background: darken($blue, 10%);
+        border-color: darken($blue, 10%);
       }
 
-      &:focus {
-        background: darken($blue, 6%);
-        border-color: darken($blue, 6%);
+      &:active {
+        background: darken($blue, 18%);
+        border-color: darken($blue, 18%);
       }
     }
 
+    // 危险状态
     &.wheel-level-danger {
       background: $red;
-      color: #f8f8f8;
       border-color: $red;
+      color: white;
 
-      &:hover {
-        background: lighten($red, 6%);
-        border-color: lighten($red, 6%);
+      &:hover,
+      &:focus {
+        background: darken($red, 10%);
+        border-color: darken($red, 10%);
       }
 
-      &:focus {
-        background: darken($red, 6%);
-        border-color: darken($red, 6%);
+      &:active {
+        background: darken($red, 16%);
+        border-color: darken($red, 16%);
       }
     }
   }
 
+  // 链接按钮各个状态
   &.wheel-theme-link {
+
+    // 危险状态
     &.wheel-level-danger {
       color: $red;
-      background: #f8f8f8;
 
-      &:hover {
-        color: lighten($red, 10%);
-        border-color: lighten($red, 10%);
-      }
-
+      &:hover,
       &:focus {
-        color: darken($red, 6%);
-        border-color: darken($red, 6%);
+        color: darken($red, 10%);
       }
     }
   }
@@ -192,11 +196,7 @@ $radius: 4px;
     &.wheel-level-primary {
       color: $blue;
 
-      &:hover {
-        color: lighten($blue, 10%);
-
-      }
-
+      &:hover,
       &:focus {
         color: darken($blue, 10%);
       }
@@ -205,12 +205,9 @@ $radius: 4px;
     &.wheel-level-danger {
       color: $red;
 
-      &:hover {
-        color: lighten($red, 10%);
-      }
-
+      &:hover,
       &:focus {
-        color: darken($red, 6%);
+        color: darken($red, 10%);
       }
     }
   }

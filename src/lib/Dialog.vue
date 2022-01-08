@@ -2,13 +2,13 @@
   <div class="wheel-dialog-overlay"></div>
   <div class="wheel-dialog-wrapper">
     <div class="wheel-dialog">
-      <header>标题</header>
+      <header>标题<span class="wheel-dialog-close"></span></header>
       <main>
         <p>第一行字</p>
         <p>第二行字</p>
       </main>
       <footer>
-        <Button>OK</Button>
+        <Button level="main">OK</Button>
         <Button>Cancel</Button>
       </footer>
     </div>
@@ -59,7 +59,7 @@ $border-color: #dcdee2;
     padding: 12px 16px;
     border-bottom: 1px solid $border-color;
     display: flex;
-    align-content: center;
+    align-items: center;
     justify-content: space-between;
     font-size: 20px;
     font-weight: 600;
@@ -69,6 +69,7 @@ $border-color: #dcdee2;
   // 内容区域
   > main {
     padding: 12px 16px;
+    color: #464a55;
   }
 
   // 底部区域
@@ -78,6 +79,7 @@ $border-color: #dcdee2;
     text-align: right;
   }
 
+  // 关闭按钮
   &-close {
     position: relative;
     display: inline-block;

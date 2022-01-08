@@ -1,7 +1,7 @@
 <template>
-  <div class="dialog-overlay"></div>
-  <div class="dialog-wrapper">
-    <div class="dialog">
+  <div class="wheel-dialog-overlay"></div>
+  <div class="wheel-dialog-wrapper">
+    <div class="wheel-dialog">
       <header>标题</header>
       <main>
         <p>第一行字</p>
@@ -23,4 +23,87 @@ export default {
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+$radius: 4px;
+$border-color: #dcdee2;
+
+.wheel-dialog {
+  background: white;
+  border-radius: $radius;
+  box-shadow: 0 0 3px fade-out(black, 0.5);
+  min-width: 15em;
+  max-width: 90%;
+
+  // 遮罩层
+  &-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: fade-out(black, 0.5);
+    z-index: 10;
+  }
+
+  // 整体坐标
+  &-wrapper {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 11;
+  }
+
+  // 标题
+  > header {
+    padding: 12px 16px;
+    border-bottom: 1px solid $border-color;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: 600;
+    color: #12151c;
+  }
+
+  // 内容区域
+  > main {
+    padding: 12px 16px;
+  }
+
+  // 底部区域
+  > footer {
+    border-top: 1px solid $border-color;
+    padding: 12px 16px;
+    text-align: right;
+  }
+
+  &-close {
+    position: relative;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      height: 1px;
+      background: black;
+      width: 100%;
+      top: 50%;
+      left: 50%;
+    }
+
+    &::before {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    &::after {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+  }
+}
+
+</style>

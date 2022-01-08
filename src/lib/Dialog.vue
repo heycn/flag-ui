@@ -1,9 +1,10 @@
 <template>
   <template v-if="visible">
-    <div class="wheel-dialog-overlay" @click="closeOnClickOverlay"></div>
+    <div class="wheel-dialog-overlay" @click="onClickOverlay"></div>
     <div class="wheel-dialog-wrapper">
       <div class="wheel-dialog">
-        <header>标题
+        <header>
+          标题
           <span @click="close" class="wheel-dialog-close"></span>
         </header>
         <main>
@@ -42,9 +43,9 @@ export default {
   components: {Button},
   setup(props, context) {
     const close = () => {
-      context.emit('update: visible', false);
+      context.emit('update:visible', false);
     };
-    const closeOnClickOverlay = () => {
+    const onClickOverlay = () => {
       if (props.closeOnClickOverlay) {
         close();
       }
@@ -56,11 +57,11 @@ export default {
     };
     const cancel = () => {
       context.emit('cancel');
+      close();
     };
-    return {close, closeOnClickOverlay, ok, cancel};
+    return {close, onClickOverlay, ok, cancel};
   }
-}
-;
+};
 </script>
 
 <style lang="scss">

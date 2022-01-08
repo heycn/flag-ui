@@ -18,30 +18,18 @@
         </div>
       </div>
     </Teleport>
-
   </template>
 </template>
 
 <script lang="ts">
 import Button from './Button.vue';
-import {openDialog} from './openDialog';
 
 export default {
   props: {
-    visible: {
-      type: Boolean,
-      default: false
-    },
-    closeOnClickOverlay: {
-      type: Boolean,
-      default: true
-    },
-    ok: {
-      type: Function
-    },
-    cancel: {
-      type: Function
-    },
+    visible: {type: Boolean, default: false},
+    closeOnClickOverlay: {type: Boolean, default: true},
+    ok: {type: Function},
+    cancel: {type: Function}
   },
   components: {Button},
   setup(props, context) {

@@ -6,12 +6,12 @@
           :closeOnClickOverlay="false"
           :ok="f1"
           :cancel="f2">
+    <template v-slot:content>
+      <strong>hi1</strong>
+      <div>hi2</div>
+    </template>
     <template v-slot:title>
       <strong>加粗的标题</strong>
-    </template>
-    <template v-slot:content>
-      <div>hi1</div>
-      <div>hi2</div>
     </template>
   </Dialog>
   <h1>示例2</h1>
@@ -21,7 +21,7 @@
 <script lang="ts">
 import Dialog from '../lib/Dialog.vue';
 import Button from '../lib/Button.vue';
-import {ref} from 'vue';
+import {ref, h} from 'vue';
 import {openDialog} from '../lib/openDialog';
 
 export default {
@@ -38,14 +38,10 @@ export default {
     };
     const showDialog = () => {
       openDialog({
-        title: '标题',
+        title: h('strong', {}, '标题'),
         content: '你好',
-        ok() {
-
-        },
-        cancel() {
-
-        }
+        ok() {},
+        cancel() {}
       });
     };
     return {x, toggle, f1, f2, showDialog};

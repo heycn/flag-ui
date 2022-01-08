@@ -24,6 +24,7 @@
 
 <script lang="ts">
 import Button from './Button.vue';
+import {openDialog} from './openDialog';
 
 export default {
   props: {
@@ -58,7 +59,7 @@ export default {
       }
     };
     const cancel = () => {
-      context.emit('cancel');
+      props.cancel?.();
       close();
     };
     return {close, onClickOverlay, ok, cancel};

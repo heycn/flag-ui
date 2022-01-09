@@ -2,17 +2,19 @@
 
 <template>
   <div class="topnav">
-    <div class="logo">
+    <router-link to="/" class="logo">
       <svg class="icon">
         <use xlink:href="#icon-wheel"></use>
       </svg>
-    </div>
+    </router-link>
     <ul class="menu">
       <li>
         <router-link to="/doc">文档</router-link>
       </li>
     </ul>
-    <span class="toggleAside" @click="toggleMenu"></span>
+    <svg v-if="menuButtonVisible" class="toggleAside" @click="toggleMenu">
+      <use xlink:href="#icon-menu"></use>
+    </svg>
   </div>
 </template>
 
@@ -20,6 +22,12 @@
 import {inject, Ref} from 'vue';
 
 export default {
+  props: {
+    menuButtonVisible: {
+      type: Boolean,
+      default: false
+    }
+  },
   setup() {
     const menuVisible = inject<Ref<boolean>>('menuVisible');
     const toggleMenu = () => {
@@ -64,13 +72,17 @@ export default {
   }
 
   > .toggleAside {
-    width: 24px;
-    height: 24px;
+    width: 32px;
+    height: 32px;
     position: absolute;
     left: 16px;
     top: 50%;
     transform: translateY(-50%);
     display: none;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   @media (max-width: 500px) {

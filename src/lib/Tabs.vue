@@ -22,7 +22,7 @@
 
 <script lang="ts">
 import Tab from './Tab.vue';
-import {computed, onMounted, ref, watchEffect} from 'vue';
+import {computed, ref, watchEffect} from 'vue';
 
 export default {
   props: {
@@ -33,15 +33,13 @@ export default {
     const selectedItem = ref<HTMLDivElement>(null);
     const underline = ref<HTMLDivElement>(null);
     const container = ref<HTMLDivElement>(null);
-    onMounted(() => {
-      watchEffect(() => {
-        const {width} = selectedItem.value.getBoundingClientRect();
-        underline.value.style.width = width + 'px';
-        const {left: left1} = container.value.getBoundingClientRect();
-        const {left: left2} = selectedItem.value.getBoundingClientRect();
-        const left = left2 - left1;
-        underline.value.style.left = left + 'px';
-      });
+    watchEffect(() => {
+      const {width} = selectedItem.value.getBoundingClientRect();
+      underline.value.style.width = width + 'px';
+      const {left: left1} = container.value.getBoundingClientRect();
+      const {left: left2} = selectedItem.value.getBoundingClientRect();
+      const left = left2 - left1;
+      underline.value.style.left = left + 'px';
     });
 
     const defaults = context.slots.default();
@@ -49,12 +47,6 @@ export default {
       if (tag.type !== Tab) {
         throw new Error('Tabs 子标签必须是 Tab');
       }
-    });
-
-    const current = computed(() => {
-      return defaults.filter((tag) => {
-        return tag.props.title === props.selected;
-      })[0];
     });
 
     const titles = defaults.map((tag) => {
@@ -65,7 +57,7 @@ export default {
       context.emit('update:selected', title);
     };
 
-    return {defaults, titles, current, select, selectedItem, underline, container};
+    return {defaults, titles, select, selectedItem, underline, container};
   }
 };
 </script>

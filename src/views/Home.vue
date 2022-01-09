@@ -1,17 +1,31 @@
 <!--官网首页-->
 
 <template>
-  <div class="topnavAndBanner">
-    <Topnav/>
-    <div class="banner">
-      <h1>Wheel UI</h1>
-      <h2>一个基于 Vue 开发的 UI框架</h2>
-      <p class="actions">
-        <a href="https://github.com/heycn/wheel-ui">GitHub</a>
-        <router-link to="/doc">快速上手</router-link>
-      </p>
+  <div>
+    <div class="topnavAndBanner">
+      <Topnav/>
+      <div class="banner">
+        <h1>Wheel UI</h1>
+        <h2>一个基于 Vue 开发的 UI框架</h2>
+        <p class="actions">
+          <a href="https://github.com/heycn/wheel-ui">GitHub</a>
+          <router-link to="/doc">快速上手</router-link>
+        </p>
+      </div>
+    </div>
+    <div class="feature">
+      <svg class="icon">
+        <use xlink:href="#icon-vue"></use>
+      </svg>
+      <svg class="icon">
+        <use xlink:href="#icon-ts"></use>
+      </svg>
+      <svg class="icon">
+        <use xlink:href="#icon-happy"></use>
+      </svg>
     </div>
   </div>
+
 </template>
 
 <script lang="ts">
@@ -27,7 +41,15 @@ export default {
   background: linear-gradient(145deg, rgba(227, 255, 253, 1) 0%, rgba(183, 233, 230, 1) 100%);
 }
 
+.feature {
+  > svg {
+    width: 64px;
+    height: 64px;
+  }
+}
+
 .banner {
+  color: #007974;
   padding: 100px 0;
   display: flex;
   justify-content: center;
@@ -39,12 +61,15 @@ export default {
 
     a {
       margin: 0 8px;
-      background: #fff;
+      background: #02bcb0;
+      color: white;
       display: inline-block;
-      height: 28px;
-      line-height: 28px;
-      border-radius: 14px;
-      padding: 0 8px;
+      padding: 8px 24px;
+      border-radius: 4px;
+
+      &:hover {
+        text-decoration: none;
+      }
     }
   }
 }

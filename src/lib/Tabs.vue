@@ -8,6 +8,7 @@
            :key="index">
         {{ t }}
       </div>
+      <div class="wheel-tabs-nav-underline"></div>
     </div>
     <div class="wheel-tabs-content">
       <component class="wheel-tabs-content-item"
@@ -60,6 +61,7 @@ $border-color: #dcdee2;
     display: flex;
     color: $color;
     border-bottom: 1px solid $border-color;
+    position: relative;
 
     &-item {
       padding: 8px 0;
@@ -73,6 +75,15 @@ $border-color: #dcdee2;
       &.selected {
         color: $blue;
       }
+    }
+
+    &-underline {
+      position: absolute;
+      height: 3px;
+      background: $blue;
+      left: 0;
+      bottom: -1px;
+      width: 100px;
     }
   }
 

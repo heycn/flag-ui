@@ -1,3 +1,5 @@
+<!--顶部导航栏-->
+
 <template>
   <div class="topnav">
     <div class="logo">LOGO</div>
@@ -25,7 +27,6 @@ export default {
 
 <style lang="scss" scoped>
 .topnav {
-  background: #ffd7d5;
   display: flex;
   padding: 16px;
   position: fixed;
@@ -54,7 +55,6 @@ export default {
   > .toggleAside {
     width: 24px;
     height: 24px;
-    background: red;
     position: absolute;
     left: 16px;
     top: 50%;

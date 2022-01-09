@@ -54,6 +54,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 .layout {
   display: flex;
   flex-direction: column;
@@ -104,8 +105,19 @@ aside {
   > ol {
     > li {
       padding: 4px 0;
+
+      :hover {
+        text-decoration: none;
+        color: #5cadff;
+      }
+
+
+      .router-link-active {
+        color: #2b85e4;
+      }
     }
   }
+
 }
 
 main {

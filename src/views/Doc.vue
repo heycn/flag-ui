@@ -71,56 +71,53 @@ export default {
     @media (max-width: 500px) {
       padding-left: 0;
     }
-  }
-}
+    display: flex;
 
-.content {
-  display: flex;
+    > aside {
+      flex-shrink: 0;
+      background: #bbdfff;
+      width: 150px;
+      padding: 16px 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding-top: 70px;
+      height: 100%;
 
-  > aside {
-    flex-shrink: 0;
-  }
-
-  > main {
-    flex-grow: 1;
-    padding: 16px;
-    background: white;
-  }
-}
-
-aside {
-  background: #bbdfff;
-  width: 150px;
-  padding: 16px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding-top: 70px;
-  height: 100%;
-
-  > h2 {
-    margin-bottom: 4px;
-  }
-
-  > ol {
-    > li {
-      padding: 4px 0;
-
-      :hover {
-        text-decoration: none;
-        color: #5cadff;
+      > h2 {
+        margin-bottom: 4px;
+        padding: 0 16px;
       }
 
+      > ol {
+        > li {
+          > a {
+            display: block;
+            padding: 4px 16px;
+          }
 
-      .router-link-active {
-        color: #2b85e4;
+
+          :hover {
+            text-decoration: none;
+            color: #5cadff;
+            background: rgba(255, 255, 255, 0.23);
+          }
+
+
+          .router-link-active {
+            color: #2b85e4;
+            background: white;
+          }
+        }
       }
     }
+
+    > main {
+      flex-grow: 1;
+      padding: 16px;
+      background: white;
+      overflow: auto;
+    }
   }
-
-}
-
-main {
-  overflow: auto;
 }
 </style>

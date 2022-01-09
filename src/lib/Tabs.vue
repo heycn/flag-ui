@@ -22,7 +22,7 @@
 
 <script lang="ts">
 import Tab from './Tab.vue';
-import {computed, ref, watchEffect} from 'vue';
+import {onMounted, ref, watchEffect} from 'vue';
 
 export default {
   props: {
@@ -33,13 +33,15 @@ export default {
     const selectedItem = ref<HTMLDivElement>(null);
     const underline = ref<HTMLDivElement>(null);
     const container = ref<HTMLDivElement>(null);
-    watchEffect(() => {
-      const {width} = selectedItem.value.getBoundingClientRect();
-      underline.value.style.width = width + 'px';
-      const {left: left1} = container.value.getBoundingClientRect();
-      const {left: left2} = selectedItem.value.getBoundingClientRect();
-      const left = left2 - left1;
-      underline.value.style.left = left + 'px';
+    onMounted(() => {
+      watchEffect(() => {
+        const {width} = selectedItem.value.getBoundingClientRect();
+        underline.value.style.width = width + 'px';
+        const {left: left1} = container.value.getBoundingClientRect();
+        const {left: left2} = selectedItem.value.getBoundingClientRect();
+        const left = left2 - left1;
+        underline.value.style.left = left + 'px';
+      });
     });
 
     const defaults = context.slots.default();

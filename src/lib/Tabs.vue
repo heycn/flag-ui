@@ -10,7 +10,7 @@ import Tab from './Tab.vue';
 
 export default {
   setup(props, context) {
-    const defaults = context.slot.default();
+    const defaults = context.slots.default();
     defaults.forEach((tag) => {
       if (tag.type !== Tab) {
         throw new Error('Tabs 子标签必须是 Tab');
@@ -23,5 +23,3 @@ export default {
   }
 };
 </script>
-
-<style lang="scss"></style>

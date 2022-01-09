@@ -10,7 +10,10 @@
       </div>
     </div>
     <div class="wheel-tabs-content">
-      <component class="wheel-tabs-content-item" :is="current"/>
+      <component class="wheel-tabs-content-item"
+                 :class="{selected: c.props.title === selected}"
+                 v-for="c in defaults"
+                 :is="c"/>
     </div>
   </div>
 </template>
@@ -75,6 +78,14 @@ $border-color: #dcdee2;
 
   &-content {
     padding: 8px 0;
+
+    &-item {
+      display: none;
+
+      &.selected {
+        display: block
+      }
+    }
   }
 }
 </style>

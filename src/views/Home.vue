@@ -9,7 +9,7 @@
         <h2>一个基于 Vue 开发的 UI框架</h2>
         <p class="actions">
           <a href="https://github.com/heycn/wheel-ui">GitHub</a>
-          <router-link to="/doc">快速上手</router-link>
+          <router-link to="/doc">开始使用</router-link>
         </p>
       </div>
     </div>

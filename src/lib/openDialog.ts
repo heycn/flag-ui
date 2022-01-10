@@ -11,7 +11,8 @@ export const openDialog = (options) => {
   };
   const app = createApp({
     render() {
-      return h(Dialog,
+      return h(
+        Dialog,
         {
           visible: true,
           'onUpdate:visible': (newVisible) => {

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Switch 组件示例 </h1>
+    <h1>Switch 开关 </h1>
     <Demo :component="Switch1Demo"/>
     <Demo :component="Switch2Demo"/>
   </div>
@@ -12,18 +12,17 @@ import Switch1Demo from './Switch1.demo.vue';
 import Switch2Demo from './Switch2.demo.vue';
 import 'prismjs';
 import 'prismjs/themes/prism-tomorrow.css';
-import Demo from './Demo.vue';
-import {ref} from 'vue';
 
 // Prism 源代码是指向全局 但是TS不认识，强制把 Prism 定义在 window，骗过TS
 const Prism = (window as any).Prism;
+import Demo from './Demo.vue';
+import {ref} from 'vue';
 
 export default {
   components: {Button, Demo},
   setup() {
     const bool = ref(false);
-    return {bool, Switch1Demo, Switch2Demo, Prism}
-      ;
+    return {bool, Switch1Demo, Switch2Demo, Prism};
   }
 };
 </script>

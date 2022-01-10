@@ -25,7 +25,6 @@ export default {
   props: {
     selected: {type: String}
   },
-
   setup(props, context) {
     const selectedItem = ref<HTMLDivElement>(null);
     const underline = ref<HTMLDivElement>(null);
@@ -43,11 +42,11 @@ export default {
 
     const defaults = context.slots.default();
     defaults.forEach((tag) => {
-      if (tag.type !== Tab) {
+      // @ts-ignore
+      if (tag.type.name !== Tab.name) {
         throw new Error('Tabs 子标签必须是 Tab');
       }
     });
-
     const current = computed(() => {
       return defaults.find(tag => tag.props.title === props.selected);
     });

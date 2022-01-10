@@ -4,7 +4,7 @@ import fs from 'fs';
 import {baseParse} from '@vue/compiler-core';
 
 export default {
-  base: '/wheel-ui-website/',
+  base: './',
   assetsDir: 'assets',
   plugins: [md()],
   vueCustomBlockTransforms: {

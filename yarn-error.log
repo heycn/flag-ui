@@ -2,7 +2,7 @@ Arguments:
   D:\Software\nodejs\node.exe D:\Software\yarn\bin\yarn.js install
 
 PATH: 
-  C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;D:\Software\yarn\bin\;D:\Software\nodejs\;C:\Users\11\AppData\Local\Microsoft\WindowsApps;D:\Microsoft VS Code\bin;C:\Users\11\AppData\Local\Yarn\bin;C:\Users\11\AppData\Roaming\npm;D:\Software\WebStorm 2021.3.1\bin;
+  C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\TortoiseSVN\bin;D:\Software\yarn\bin\;D:\Software\nodejs\;C:\Users\wb.chennan08\AppData\Local\Microsoft\WindowsApps;D:\Bandizip\;C:\Users\wb.chennan08\AppData\Local\Yarn\bin;C:\Users\wb.chennan08\AppData\Roaming\npm;D:\Software\WebStorm 2021.3.1\bin;
 
 Yarn version: 
   1.22.5
@@ -14,7 +14,8 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: EPERM: operation not permitted, unlink 'C:\Users\11\Desktop\wheel-ui\node_modules\vite\node_modules\esbuild\esbuild.exe'
+  Error: getaddrinfo EAI_AGAIN registry.npmmirror.com
+      at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:71:26)
 
 npm manifest: 
   {

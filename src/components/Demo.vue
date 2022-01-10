@@ -23,14 +23,14 @@ import {computed, ref} from 'vue';
 const Prism = (window as any).Prism;
 export default {
   components: {Button},
-  props: {component: Object},
+  props: {
+    component: Object
+  },
   setup(props) {
     const html = computed(() => {
       return Prism.highlight(props.component.__sourceCode, Prism.languages.html, 'html');
     });
-    const toggleCode = () => {
-      codeVisible.value = !codeVisible;
-    };
+    const toggleCode = () => codeVisible.value = !codeVisible.value;
     const codeVisible = ref(false);
     return {Prism, html, codeVisible, toggleCode};
   }

@@ -1,4 +1,4 @@
-<demo>size</demo>
+<demo>支持 size</demo>
 <template>
   <div>
     <div>
@@ -23,6 +23,6 @@
 import Button from '../lib/Button.vue';
 
 export default {
-  components: {Button},
+  components: {Button}
 };
 </script>

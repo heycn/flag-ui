@@ -1,19 +1,27 @@
 {
   "name": "wheel-ui",
-  "version": "0.0.0",
+  "version": "0.0.4",
+  "files": [
+    "dist/lib/*"
+  ],
+  "main": "dist/lib/wheel.js",
+  "module": "dist/lib/wheel.esm.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build"
+  },
+  "resolutions": {
+    "node-sass": "npm:sass@1.26.11"
   },
   "dependencies": {
     "github-markdown-css": "4.0.0",
     "marked": "1.1.1",
     "prismjs": "1.21.0",
-    "vue": "3.2.19",
+    "vue": "3.0.0",
     "vue-router": "4.0.0-beta.3"
   },
   "devDependencies": {
-    "@vue/compiler-sfc": "3.2.19",
+    "@vue/compiler-sfc": "3.0.0",
     "rollup-plugin-esbuild": "2.5.0",
     "rollup-plugin-scss": "2.6.0",
     "rollup-plugin-terser": "7.0.2",

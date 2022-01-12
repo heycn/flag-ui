@@ -1,4 +1,4 @@
-<demo>一键打开 Dialog</demo>
+<demo>一键打开对话框</demo>
 <template>
   <div>
     <Button @click="showDialog">打开对话框</Button>

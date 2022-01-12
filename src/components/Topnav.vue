@@ -90,7 +90,7 @@ export default {
       display: none
     }
     > .logo {
-      margin: 0 auto;
+      margin-left: 64px;
     }
     > .toggleAside {
       display: inline-block;

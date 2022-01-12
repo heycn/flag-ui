@@ -1,6 +1,4 @@
-<demo>
-常规使用
-</demo>
+<demo>常规使用</demo>
 <template>
   <Tabs v-model:selected="x">
     <Tab title="导航1">内容1</Tab>

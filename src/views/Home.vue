@@ -3,13 +3,24 @@
 <template>
   <div>
     <div class="topnavAndBanner">
-      <Topnav/>
       <div class="banner">
+        <svg class="flagIcon">
+          <use xlink:href="#icon-flag"></use>
+        </svg>
         <h1>Flag UI</h1>
         <h2>一个基于 Vue 开发的 UI框架</h2>
         <p class="actions">
-          <a href="https://github.com/heycn/flag-ui">GitHub</a>
-          <router-link to="/doc">开始使用</router-link>
+          <a href="https://github.com/heycn/flag-ui" class="github">
+            <svg class="icon">
+              <use xlink:href="#icon-github"></use>
+            </svg>
+            GitHub</a>
+          <router-link to="/doc">
+            <svg class="icon">
+              <use xlink:href="#icon-start"></use>
+            </svg>
+            开始使用
+          </router-link>
         </p>
       </div>
     </div>
@@ -20,21 +31,21 @@
             <use xlink:href="#icon-vue"></use>
           </svg>
           <h3>基于 Vue 3</h3>
-          <p>骄傲地使用了 Vue 3 Composition API</p>
+          <p>尝鲜使用 Vue 3 API</p>
         </li>
         <li>
           <svg>
             <use xlink:href="#icon-ts"></use>
           </svg>
           <h3>基于 TypeScript </h3>
-          <p>源代码采用 TypeScript 书写（非严格检查）</p>
+          <p>源代码采用 TypeScript 书写</p>
         </li>
         <li>
           <svg>
             <use xlink:href="#icon-happy"></use>
           </svg>
           <h3>代码易读</h3>
-          <p>每个组件的源代码都极其简洁</p>
+          <p>每个组件都极其简洁</p>
         </li>
       </ul>
     </div>
@@ -42,17 +53,9 @@
 
 </template>
 
-<script lang="ts">
-import Topnav from '../components/Topnav.vue';
-
-export default {
-  components: {Topnav}
-};
-</script>
-
 <style lang="scss" scoped>
 .topnavAndBanner {
-  background: linear-gradient(145deg, rgba(227, 255, 253, 1) 0%, rgba(183, 233, 230, 1) 100%);
+  background: linear-gradient(145deg, rgba(51, 9, 103, 1) 0%, rgba(48, 207, 208, 1) 100%);
   clip-path: ellipse(80% 60% at 50% 40%);
 }
 
@@ -110,23 +113,34 @@ export default {
 }
 
 .banner {
-  color: #007974;
+  color: #eef8fe;
   padding: 100px 0;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 
+  > .icon {
+    width: 96px;
+    height: 96px;
+  }
+
   > .actions {
     padding: 8px 0;
 
+    .icon {
+      width: 28px;
+      height: 28px;
+    }
+
     a {
       margin: 0 8px;
-      background: #02bcb0;
+      background: #5eb95f;
       color: white;
       display: inline-block;
       padding: 8px 24px;
-      border-radius: 4px;
+      border-radius: 26px;
+      font-size: 20px;
 
       &:hover {
         text-decoration: none;

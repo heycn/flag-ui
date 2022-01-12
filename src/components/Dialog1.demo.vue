@@ -1,4 +1,4 @@
-<demo>常规使用</demo>
+<demo>常规用法</demo>
 <template>
   <div>
     <Button @click="toggle">打开对话框</Button>

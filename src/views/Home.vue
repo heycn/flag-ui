@@ -5,10 +5,10 @@
     <div class="topnavAndBanner">
       <Topnav/>
       <div class="banner">
-        <h1>Wheel UI</h1>
+        <h1>Flag UI</h1>
         <h2>一个基于 Vue 开发的 UI框架</h2>
         <p class="actions">
-          <a href="https://github.com/heycn/wheel-ui">GitHub</a>
+          <a href="https://github.com/heycn/flag-ui">GitHub</a>
           <router-link to="/doc">开始使用</router-link>
         </p>
       </div>

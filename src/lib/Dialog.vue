@@ -1,12 +1,12 @@
 <template>
   <template v-if="visible">
     <Teleport to="body">
-      <div class="wheel-dialog-overlay" @click="onClickOverlay"></div>
-      <div class="wheel-dialog-wrapper">
-        <div class="wheel-dialog">
+      <div class="flag-dialog-overlay" @click="onClickOverlay"></div>
+      <div class="flag-dialog-wrapper">
+        <div class="flag-dialog">
           <header>
             <slot name="title"/>
-            <span @click="close" class="wheel-dialog-close"></span>
+            <span @click="close" class="flag-dialog-close"></span>
           </header>
           <main>
             <slot name="content"/>
@@ -59,7 +59,7 @@ export default {
 $radius: 4px;
 $border-color: #dcdee2;
 
-.wheel-dialog {
+.flag-dialog {
   background: white;
   border-radius: $radius;
   box-shadow: 0 0 3px fade-out(black, 0.5);

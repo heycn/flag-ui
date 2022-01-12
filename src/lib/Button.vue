@@ -1,8 +1,8 @@
 <template>
-  <button class="wheel-button"
+  <button class="flag-button"
           :class="classes"
           :disabled="disabled">
-    <span v-if="loading" class="wheel-loadingIndicator"></span>
+    <span v-if="loading" class="flag-loadingIndicator"></span>
     <slot/>
   </button>
 </template>
@@ -37,9 +37,9 @@ export default {
     const {theme, size, level} = props;
     const classes = computed(() => {
       return {
-        [`wheel-theme-${theme}`]: theme,
-        [`wheel-size-${size}`]: size,
-        [`wheel-level-${level}`]: level
+        [`flag-theme-${theme}`]: theme,
+        [`flag-size-${size}`]: size,
+        [`flag-level-${level}`]: level
       };
     });
     return {classes};
@@ -56,7 +56,7 @@ $radius: 4px;
 $red: #fe3435;
 $grey: #c5c8ce;
 
-.wheel-button {
+.flag-button {
   // 基础按钮样式
   box-sizing: border-box;
   height: $h;
@@ -98,7 +98,7 @@ $grey: #c5c8ce;
   }
 
   // 链接按钮样式
-  &.wheel-theme-link {
+  &.flag-theme-link {
     border-color: transparent;
     box-shadow: none;
     color: $blue;
@@ -114,7 +114,7 @@ $grey: #c5c8ce;
   }
 
   // 文本按钮样式
-  &.wheel-theme-text {
+  &.flag-theme-text {
     border-color: transparent;
     box-shadow: none;
     color: inherit;
@@ -131,23 +131,23 @@ $grey: #c5c8ce;
   }
 
   // 大号按钮样式
-  &.wheel-size-big {
+  &.flag-size-big {
     font-size: 24px;
     height: 48px;
     padding: 0 16px;
   }
 
   // 小号按钮样式
-  &.wheel-size-small {
+  &.flag-size-small {
     font-size: 12px;
     height: 20px;
     padding: 0 4px;
   }
 
   // 普通按钮各个状态
-  &.wheel-theme-button {
+  &.flag-theme-button {
     // 主要状态
-    &.wheel-level-primary {
+    &.flag-level-primary {
       background: $blue;
       color: white;
       border-color: $blue;
@@ -165,7 +165,7 @@ $grey: #c5c8ce;
     }
 
     // 危险状态
-    &.wheel-level-danger {
+    &.flag-level-danger {
       background: $red;
       border-color: $red;
       color: white;
@@ -184,10 +184,10 @@ $grey: #c5c8ce;
   }
 
   // 链接按钮各个状态
-  &.wheel-theme-link {
+  &.flag-theme-link {
 
     // 危险状态
-    &.wheel-level-danger {
+    &.flag-level-danger {
       color: $red;
 
       &:hover,
@@ -203,9 +203,9 @@ $grey: #c5c8ce;
   }
 
   // 文本按钮各个状态
-  &.wheel-theme-text {
+  &.flag-theme-text {
     // 主要状态
-    &.wheel-level-primary {
+    &.flag-level-primary {
       color: $blue;
 
       &:hover,
@@ -219,7 +219,7 @@ $grey: #c5c8ce;
     }
 
     // 危险状态
-    &.wheel-level-danger {
+    &.flag-level-danger {
       color: $red;
 
       &:hover,
@@ -234,7 +234,7 @@ $grey: #c5c8ce;
   }
 
   // 不可选种状态
-  &.wheel-theme-button {
+  &.flag-theme-button {
     &[disabled] {
       cursor: not-allowed;
       color: $grey;
@@ -245,7 +245,7 @@ $grey: #c5c8ce;
     }
   }
 
-  &.wheel-theme-link, &.wheel-theme-text {
+  &.flag-theme-link, &.flag-theme-text {
     &[disabled] {
       cursor: not-allowed;
       color: $grey;
@@ -253,7 +253,7 @@ $grey: #c5c8ce;
   }
 
   // 加载状态
-  > .wheel-loadingIndicator {
+  > .flag-loadingIndicator {
     width: 14px;
     height: 14px;
     display: inline-block;
@@ -262,11 +262,11 @@ $grey: #c5c8ce;
     border-color: $blue $blue $blue transparent;
     border-style: solid;
     border-width: 2px;
-    animation: wheel-spin 1s infinite linear;
+    animation: flag-spin 1s infinite linear;
   }
 }
 
-@keyframes wheel-spin {
+@keyframes flag-spin {
   0% {
     transform: rotate(0deg)
   }

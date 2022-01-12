@@ -1,5 +1,5 @@
 <template>
-  <button class="wheel-switch" @click="toggle" :class="{'wheel-checked':value}">
+  <button class="flag-switch" @click="toggle" :class="{'flag-checked':value}">
     <span></span>
   </button>
 </template>
@@ -20,7 +20,7 @@ export default {
 </script>
 
 <style lang="scss">
-.wheel-switch {
+.flag-switch {
   height: 22px;
   width: 44px;
   border: none;
@@ -39,7 +39,7 @@ export default {
     transition: all 250ms;
   }
 
-  &.wheel-checked {
+  &.flag-checked {
     background: #2d8cf0;
 
     > span {
@@ -61,7 +61,7 @@ export default {
     }
   }
 
-  &.wheel-checked:active {
+  &.flag-checked:active {
     > span {
       width: 22px;
       margin-left: -4px;

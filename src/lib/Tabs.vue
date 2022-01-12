@@ -1,7 +1,7 @@
 <template>
-  <div class="wheel-tabs">
-    <div class="wheel-tabs-nav" ref="container">
-      <div class="wheel-tabs-nav-item"
+  <div class="flag-tabs">
+    <div class="flag-tabs-nav" ref="container">
+      <div class="flag-tabs-nav-item"
            v-for="(t,index) in titles"
            :ref="el => {if (t === selected) selectedItem = el}"
            @click="select(t)"
@@ -9,9 +9,9 @@
            :key="index">
         {{ t }}
       </div>
-      <div class="wheel-tabs-nav-underline" ref="underline"></div>
+      <div class="flag-tabs-nav-underline" ref="underline"></div>
     </div>
-    <div class="wheel-tabs-content">
+    <div class="flag-tabs-content">
       <component :is="current" :key="current.props.title"/>
     </div>
   </div>
@@ -68,7 +68,7 @@ export default {
 $blue: #2d8cf0;
 $color: #17233d;
 $border-color: #dcdee2;
-.wheel-tabs {
+.flag-tabs {
   &-nav {
     display: flex;
     color: $color;

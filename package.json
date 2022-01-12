@@ -14,7 +14,6 @@
     "node-sass": "npm:sass@1.26.11"
   },
   "dependencies": {
-    "flag-ui": "^0.0.2",
     "github-markdown-css": "4.0.0",
     "marked": "1.1.1",
     "prismjs": "1.21.0",

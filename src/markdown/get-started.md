@@ -5,7 +5,7 @@
 然后引入我的组件库
 
 ```
-import { ... } from "flag-ui"
+import { Switch, Dialog, Dialog, openDialog, Tabs, Tab } from "flag-ui"
 ```
 
 就可以使用我提供的组件了。

@@ -1,11 +1,11 @@
 {
-  "name": "element-wheel-ui",
+  "name": "flag-ui",
   "version": "0.0.0",
   "files": [
     "dist/lib/*"
   ],
-  "main": "dist/lib/wheel.js",
-  "module": "dist/lib/wheel.esm.js",
+  "main": "dist/lib/flag.js",
+  "module": "dist/lib/flag.esm.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build"

@@ -75,7 +75,7 @@ export default {
 
     > aside {
       flex-shrink: 0;
-      background: #bbdfff;
+      background: #ffffff;
       width: 150px;
       padding: 16px 0;
       position: fixed;
@@ -101,7 +101,7 @@ export default {
           :hover {
             text-decoration: none;
             color: #5cadff;
-            background: rgba(255, 255, 255, 0.23);
+            background: #f8f8f8;
           }
 
 

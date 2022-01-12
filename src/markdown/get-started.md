@@ -2,10 +2,10 @@
 
 请先[安装](#/doc/install)本组件库。
 
-然后在你的代码中写入下面的代码
+然后引入我的组件库
 
 ```
-import {Button, Tabs, Switch, Dialog} from "flag-ui"
+import { ... } from "flag-ui"
 ```
 
 就可以使用我提供的组件了。
@@ -16,14 +16,17 @@ import {Button, Tabs, Switch, Dialog} from "flag-ui"
 
 ```
 <template>
-  <div>
-    <Button>按钮</Button>
-  </div>
+  <Switch v-model:value="switchValue" />
 </template>
+
 <script>
-import {Button, Tabs, Switch, Dialog} from "flag-ui"
-export default {
-  components: {Button}
-}
+  import { Switch } from 'flag-ui'
+  import 'flag-ui/dist/lib/flag.css'
+  export default {
+    components: { Switch },
+    data() {
+      return { switchValue: false }
+    }
+  }
 </script>
 ```

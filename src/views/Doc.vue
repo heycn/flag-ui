@@ -79,7 +79,7 @@ export default {
       width: 150px;
       padding: 16px 0;
       position: fixed;
-      top: 0;
+      top: 8px;
       left: 0;
       padding-top: 70px;
       height: 100%;

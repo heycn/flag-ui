@@ -1,7 +1,6 @@
 <template>
   <div>
     <h1>Button 按钮</h1>
-<!--    <Demo :component="Button1Demo"/>-->
     <Demo :component="Button1Demo"/>
     <Demo :component="Button2Demo"/>
     <Demo :component="Button3Demo"/>

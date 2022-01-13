@@ -1,22 +1,33 @@
-
 <p align="center">
   <a href="https://github.com/zyqq/wheel" target="_blank" rel="noopener noreferrer">
     <img width="100" src="public/flag.png" alt="Echo Wheel logo">
   </a>
 </p>
 
-<p align="center">
-  <a href="https://www.npmjs.com/package/flag-ui" target="_blank">
-    <img src="https://img.shields.io/badge/npm-v0.0.3-blue" alt="Version">
-  </a>
-</p>
-
-> 待完善。。。
-
 <h2 align="center">Flag UI
 
-尝鲜使用 Vue + TypeScript 开发的 UI 组件库</h2>
+尝鲜使用 Vue3 + TypeScript 开发的 UI 组件库</h2>
 
-# 介绍
+## Intro
 
-这是我在学习 Vue 中写的一个 UI 框架，希望对你有用。可查看  [官方文档](https://heycn.github.io/flag-ui-website) 预览 👀
+这是我在学习 Vue3 时制作的一个 UI 组件库：[点击预览](https://heycn.github.io/flag-ui-website) 👀
+
+这款组件库其实是我为了总结这段时间自己的学习成果而写的，全程亲手编写，尽量不采用第三方库
+
+**Therefore**: 强烈不建议你将此 UI 库用于生产环境。但如果你是抱着看源代码的目的来的，那么这个库还是值得一看，也欢迎点评
+
+[链源码接](https://github.com/heycn/flag-ui)
+
+## Install
+
+`yarn add flag-ui`
+
+or
+
+`npm install flag-ui
+`
+
+
+## End
+
+如果你觉得这个项目还 ok 的话，希望能点个 star

@@ -22,8 +22,8 @@ export default {
   setup() {
     const showDialog = () => {
       openDialog({
-        title: h('strong', {}, '标题'),
-        content: '你好',
+        title: h('strong', {}, '提示'),
+        content: '我不服！我就只是个提示的对话框，你爱怎么关就怎么关！',
         ok() {
           console.log('ok');
         },

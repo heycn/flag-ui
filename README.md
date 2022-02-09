@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://github.com/zyqq/wheel" target="_blank" rel="noopener noreferrer">
+  <a href="#" target="_blank" rel="noopener noreferrer">
     <img width="100" src="public/flag.png" alt="Echo Wheel logo">
   </a>
 </p>

@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="#" target="_blank" rel="noopener noreferrer">
+  <a target="_blank" rel="noopener noreferrer">
     <img width="100" src="public/flag.png" alt="Echo Wheel logo">
   </a>
 </p>

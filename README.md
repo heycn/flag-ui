@@ -1,6 +1,6 @@
 <p align="center">
   <a target="_blank" rel="noopener noreferrer">
-    <img width="100" src="public/flag.png" alt="Echo Wheel logo">
+    <img width="100" src="public/flag.png" alt="logo">
   </a>
 </p>
 
